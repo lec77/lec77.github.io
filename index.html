@@ -65,22 +65,6 @@
           font-weight: 400;
       }
 
-      /* language switch link */
-      .lang-switch {
-          margin-top: 8px;
-          display: inline-block;
-          color: #2c3e50;
-          text-decoration: none;
-          font-size: 0.95em;
-          border-bottom: 1px solid #ddd;
-          padding-bottom: 2px;
-          transition: border-color 0.2s;
-      }
-
-      .lang-switch:hover {
-          border-color: #2c3e50;
-      }
-
       section {
           margin-bottom: 50px;
       }
@@ -261,6 +245,45 @@
           border-color: #2c3e50;
       }
 
+      /* contact tooltip for email */
+      .contact .contact-item {
+          color: #2c3e50;
+          font-size: 0.95em;
+          border-bottom: 1px solid #ddd;
+          padding-bottom: 2px;
+          cursor: default;
+          position: relative;
+          display: inline-block;
+      }
+
+      .contact .contact-item:hover {
+          border-color: #2c3e50;
+      }
+
+      .tooltip-box {
+          position: absolute;
+          left: 0;
+          top: 120%;
+          background: #1a1a1a;
+          color: #fff;
+          font-size: 0.85em;
+          padding: 8px 10px;
+          border-radius: 6px;
+          white-space: nowrap;
+          box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+          opacity: 0;
+          visibility: hidden;
+          transform: translateY(-4px);
+          transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+          z-index: 10;
+      }
+
+      .contact .contact-item:hover .tooltip-box {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+      }
+
       footer {
           margin-top: 80px;
           padding-top: 30px;
@@ -307,7 +330,13 @@
               <div class="header-text">
                   <h1>Le Chen (陈乐)</h1>
                   <p class="tagline">Ph.D. Student at Shanghai Jiao Tong University</p>
-                  <a class="lang-switch" href="https://ipads.se.sjtu.edu.cn/zh/pub/members/le_chen/">中文主页</a>
+                  <div class="contact">
+                      <span class="contact-item">Email
+                        <span class="tooltip-box">cen-le AT sjtu DOT edu DOT cn</span>
+                      </span>
+                      <a href="https://github.com/lec77" target="_blank">GitHub</a>
+                      <a href="https://ipads.se.sjtu.edu.cn/zh/pub/members/le_chen/">中文主页</a>
+                  </div>
               </div>
               <img class="avatar" src="avatar.jpg" alt="Profile photo of Le Chen" />
           </div>
@@ -389,10 +418,6 @@
 
       <section>
           <h2>Contact</h2>
-          <div class="contact">
-              <a href="mailto:cen-le@sjtu.edu.cn">Email</a>
-              <a href="https://github.com/lec77" target="_blank">GitHub</a>
-          </div>
       </section>
   </div>
 
