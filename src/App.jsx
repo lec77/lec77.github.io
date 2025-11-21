@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Moon, Sun, FileText, Github, Linkedin, Mail, 
-  MapPin, GraduationCap, Download, 
+  Moon, Sun, FileText, Github, Mail, 
+  GraduationCap, 
   BookOpen, ChevronRight, ChevronDown, Monitor 
 } from 'lucide-react';
+import avatarImage from './assets/avatar.jpg';
 
 // --- Mock Data (保持不变) ---
 const personalInfo = {
@@ -295,7 +296,7 @@ const App = () => {
               <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white dark:border-slate-800 shadow-2xl">
                  {/* Placeholder for actual image */}
                 <img 
-                  src="/src/assets/avatar.jpg" 
+                  src={avatarImage} 
                   alt="Profile" 
                   className="w-full h-full object-cover bg-slate-100 dark:bg-slate-800"
                 />
